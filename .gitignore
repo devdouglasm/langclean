@@ -1,0 +1,20 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+
+# Secrets and local agent config
+.env
+.agents/
+
+# OS, editors, and local databases
+.DS_Store
+.idea/
+.vscode/
+*.db
