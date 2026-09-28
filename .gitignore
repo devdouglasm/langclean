@@ -18,3 +18,7 @@ wheels/
 .idea/
 .vscode/
 *.db
+
+# Frontend
+node_modules/
+frontend/dist/

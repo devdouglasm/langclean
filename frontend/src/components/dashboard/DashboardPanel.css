@@ -1,0 +1,177 @@
+.dashboard-panel {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: min(450px, 35vw);
+  min-width: 280px;
+  transform: translate(-50%, -50%);
+  pointer-events: auto;
+}
+
+.scan-card,
+.folder-card {
+  background: rgba(255, 255, 255, 0.78);
+  border: 1px solid rgba(255, 255, 255, 0.95);
+  border-radius: 1.5rem;
+  box-shadow: 0 14px 40px rgba(15, 23, 42, 0.07);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+}
+
+.scan-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.25rem 1.2rem 1.15rem;
+  text-align: center;
+}
+
+.scan-label {
+  margin: 0;
+  font-size: 0.82rem;
+  color: #64748b;
+}
+
+.scan-total {
+  margin: 0.35rem 0 0.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.scan-total-value {
+  font-size: 2rem;
+  font-weight: 500;
+  letter-spacing: -0.03em;
+  color: #2563eb;
+  line-height: 1.05;
+}
+
+.scan-total-caption {
+  font-size: 0.84rem;
+  color: #64748b;
+}
+
+.scan-sunburst-wrap {
+  margin: 0.35rem 0 0.75rem;
+}
+
+.sunburst {
+  display: block;
+  overflow: visible;
+}
+
+.scan-cta {
+  appearance: none;
+  border: 1.5px solid rgba(59, 130, 246, 0.55);
+  background: rgba(255, 255, 255, 0.55);
+  color: #2563eb;
+  border-radius: 999px;
+  padding: 0.65rem 1.4rem;
+  font: inherit;
+  font-size: 0.92rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.15s ease, transform 0.15s ease;
+}
+
+.scan-cta:hover {
+  background: rgba(219, 234, 254, 0.75);
+  transform: translateY(-1px);
+}
+
+.folder-card {
+  padding: 1rem 1rem 0.85rem;
+}
+
+.folder-title {
+  margin: 0 0 0.7rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #0f172a;
+}
+
+.folder-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.folder-row {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 0.7rem;
+  padding: 0.55rem 0.2rem;
+  border-radius: 0.75rem;
+}
+
+.folder-row:hover {
+  background: rgba(241, 245, 249, 0.7);
+}
+
+.folder-icon {
+  width: 1.85rem;
+  height: 1.85rem;
+  border-radius: 0.55rem;
+  display: grid;
+  place-items: center;
+  color: #3b82f6;
+  background: rgba(59, 130, 246, 0.1);
+}
+
+.folder-name {
+  font-size: 0.9rem;
+  color: #1e293b;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.folder-size {
+  font-size: 0.84rem;
+  color: #64748b;
+  white-space: nowrap;
+}
+
+.folder-more {
+  width: 100%;
+  margin-top: 0.55rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  border: 0;
+  border-radius: 0.9rem;
+  padding: 0.75rem 0.9rem;
+  background: rgba(219, 234, 254, 0.55);
+  color: #1d4ed8;
+  font: inherit;
+  font-size: 0.88rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.folder-more:hover {
+  background: rgba(191, 219, 254, 0.75);
+}
+
+@media (max-width: 900px) {
+  .dashboard-panel {
+    position: relative;
+    top: auto;
+    left: auto;
+    width: min(100%, calc(100vw - 1.5rem));
+    min-width: 0;
+    margin: 0.75rem auto 1rem;
+    transform: none;
+  }
+}
